@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YUJEN — Quick Sketch</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#e31937">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="YUJEN">
+  <link rel="apple-touch-icon" href="apple-icon-180.png">
+  <style>
+    :root{--bg:#0f1115;--panel:#171a22;--text:#e8ecf1;--muted:#9aa3b5;--accent:#e31937;--line:#2a3242;}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font:16px/1.5 -apple-system,system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text)}
+    .wrap{min-height:100%;display:flex;align-items:center;justify-content:center;padding:40px}
+    .card{width:min(920px,96vw);background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+    h1{margin:0 0 8px 0;font-size:28px;letter-spacing:.3px}
+    p{margin:8px 0;color:var(--muted)}
+    .row{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+    .btn{appearance:none;border:1px solid var(--line);background:#1f2531;color:#fff;padding:12px 16px;border-radius:12px;cursor:pointer;font-weight:700;text-decoration:none;display:inline-block}
+    .btn.primary{background:var(--accent);border-color:#000}
+    .tile{border:1px solid var(--line);background:#1a1f2a;border-radius:12px;padding:12px;margin-top:16px}
+    footer{margin-top:20px;font-size:12px;color:var(--muted)}
+  </style>
+  <script>if('serviceWorker'in navigator){addEventListener('load',()=>navigator.serviceWorker.register('sw.js'))}</script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>YUJEN — Quick Sketch</h1>
+      <p>Быстрые скетчи харднессов и трусов. Работает оффлайн как PWA.</p>
+      <div class="row">
+        <a class="btn primary" href="./editor.html">🚀 Запустить редактор</a>
+        <a class="btn" href="./editor.html#install">Как установить на iPhone</a>
+      </div>
+      <div class="tile">
+        <strong>Экспорт:</strong> PNG, SVG, и «ВЫКРОЕКИ (SVG CUT)» для резки. Масштаб и отверстия настраиваются внутри редактора.
+      </div>
+      <footer>© YUJEN</footer>
+    </div>
+  </div>
+</body>
+</html>
